@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     sudo apt -y update
 
     # Work around https://github.com/chef/bento/issues/661
-    # apt-get -qqy upgrades
+    # sudo apt -y upgrade
     DEBIAN_FRONTEND=noninteractive sudo apt -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 
     sudo apt -y install make zip unzip postgresql
